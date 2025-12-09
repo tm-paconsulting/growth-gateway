@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Growth Gateway Map</title>
+    <title>My World by amCharts</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes, minimal-ui">
     <style>
 body {
@@ -48,6 +48,11 @@ am5viewer.create("chartdiv", {
       "themeTags": [
         "light"
       ],
+      "labelColor": {
+        "type": "Color",
+        "value": "#99ccff"
+      },
+      "labelOpacity": 1,
       "fillColor": {
         "type": "Color",
         "value": "#33cc66"
@@ -56,7 +61,9 @@ am5viewer.create("chartdiv", {
       "polygonTooltipText": "{name}",
       "polygonInteractive": true,
       "pointInteractive": true,
+      "labelText": "Multi Country Interventions",
       "labelInteractive": false,
+      "labelPinned": false,
       "clipBackground": true,
       "__parse": true
     },
@@ -86,8 +93,8 @@ am5viewer.create("chartdiv", {
             "value": "#f1f1f1"
           },
           "fillOpacity": 1,
-          "width": 968,
-          "height": 570,
+          "width": 1910,
+          "height": 933,
           "x": 0,
           "y": 0,
           "isMeasured": false
@@ -96,37 +103,51 @@ am5viewer.create("chartdiv", {
       "themeTags": [
         "map"
       ],
-      "translateX": 569.4545621934258,
-      "translateY": 340.56676200907924,
-      "rotationX": -90.4463699272565,
+      "translateX": 998.9820821140335,
+      "translateY": 606.4578809998333,
+      "rotationX": -75.0833858754216,
+      "rotationY": 0,
       "__parse": true,
-      "homeZoomLevel": 1.5,
+      "homeZoomLevel": 1.8000086258039016,
       "homeGeoPoint": {
-        "longitude": 62.11836085304932,
-        "latitude": 18.110911173578703
+        "longitude": 69.00002949716111,
+        "latitude": 19.000070993301552
       },
-      "homeRotationX": -90.4463699272565,
+      "homeRotationX": -75.0833858754216,
       "homeRotationY": 0
     },
     "editor.pointTemplate": {
       "toggleKey": "active",
       "centerX": {
         "type": "Percent",
-        "value": 50
+        "value": 10
       },
       "centerY": {
         "type": "Percent",
-        "value": 50
+        "value": 95
       },
-      "tooltipText": "{name}"
+      "tooltipText": "{name}",
+      "__parse": true
     },
     "editor.bubbleTemplate": {
       "toggleKey": "active",
-      "tooltipText": "{name}: {value}"
+      "tooltipText": "{name}: {value}",
+      "__parse": true
     },
     "editor.pixelTemplate": {
       "tooltipText": "{name}",
-      "toggleKey": "active"
+      "toggleKey": "active",
+      "__parse": true,
+      "userData": {
+        "point1": {
+          "longitude": 177.93964620187305,
+          "latitude": -62.70527879103915
+        },
+        "point2": {
+          "longitude": -174.5681581685744,
+          "latitude": -62.70527879103915
+        }
+      }
     },
     "editor.linePointTemplate": {
       "toggleKey": "active",
@@ -138,11 +159,13 @@ am5viewer.create("chartdiv", {
         "type": "Percent",
         "value": 50
       },
-      "tooltipText": "{name}"
+      "tooltipText": "{name}",
+      "__parse": true
     },
     "editor.labelTemplate": {
       "toggleKey": "active",
-      "tooltipText": "{name}"
+      "tooltipText": "{name}",
+      "__parse": true
     },
     "editor.polygonSeries": {
       "valueField": "value",
@@ -153,7 +176,8 @@ am5viewer.create("chartdiv", {
       ],
       "geometryField": "geometry",
       "geometryTypeField": "geometryType",
-      "idField": "id"
+      "idField": "id",
+      "__parse": true
     },
     "editor.lineSeries": {
       "layer": 30,
@@ -161,21 +185,24 @@ am5viewer.create("chartdiv", {
       "lineTypeField": "lineType",
       "geometryField": "geometry",
       "geometryTypeField": "geometryType",
-      "idField": "id"
+      "idField": "id",
+      "__parse": true
     },
     "editor.pointSeries": {
       "fixedField": "fixed",
       "id": "pointseries",
       "geometryField": "geometry",
       "geometryTypeField": "geometryType",
-      "idField": "id"
+      "idField": "id",
+      "__parse": true
     },
     "editor.labelSeries": {
       "fixedField": "fixed",
       "id": "labelseries",
       "geometryField": "geometry",
       "geometryTypeField": "geometryType",
-      "idField": "id"
+      "idField": "id",
+      "__parse": true
     },
     "editor.bubbleSeries": {
       "calculateAggregates": true,
@@ -184,7 +211,8 @@ am5viewer.create("chartdiv", {
       "id": "bubbleseries",
       "geometryField": "geometry",
       "geometryTypeField": "geometryType",
-      "idField": "id"
+      "idField": "id",
+      "__parse": true
     },
     "editor.gridSeries": {
       "themeTags": [
@@ -196,7 +224,8 @@ am5viewer.create("chartdiv", {
       "geometryTypeField": "geometryType",
       "idField": "id",
       "visible": false,
-      "clipExtent": true
+      "clipExtent": true,
+      "__parse": true
     },
     "editor.backgroundSeries": {
       "visible": true,
@@ -208,7 +237,8 @@ am5viewer.create("chartdiv", {
       "geometryField": "geometry",
       "geometryTypeField": "geometryType",
       "idField": "id",
-      "exclude": []
+      "exclude": [],
+      "__parse": true
     },
     "editor.backgroundSeries.mapPolygons.template": {
       "forceInactive": true,
@@ -219,7 +249,8 @@ am5viewer.create("chartdiv", {
       "stroke": {
         "type": "Color",
         "value": "#ffffff"
-      }
+      },
+      "__parse": true
     },
     "editor.gridSeries.mapLines.template": {
       "forceInactive": true,
@@ -227,7 +258,8 @@ am5viewer.create("chartdiv", {
         "type": "Color",
         "value": "#000000"
       },
-      "strokeOpacity": 0.04
+      "strokeOpacity": 0.04,
+      "__parse": true
     }
   },
   "data": {
@@ -2220,7 +2252,83 @@ am5viewer.create("chartdiv", {
     ],
     "editor.lineSeries": [],
     "editor.pointSeries": [],
-    "editor.labelSeries": [],
+    "editor.labelSeries": [
+      {
+        "fixed": true,
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -22.88357,
+            -20.5022
+          ],
+          "__parse": false
+        },
+        "id": "label_1",
+        "name": "Country Specific Interventions",
+        "populateText": true,
+        "settings": {
+          "type": "Template",
+          "settings": {
+            "text": "Country Specific Interventions",
+            "fill": {
+              "type": "Color",
+              "value": "#33cc66"
+            },
+            "fillOpacity": 1,
+            "fontSize": "1em",
+            "fontWeight": "bold",
+            "textAlign": "center",
+            "x": {
+              "type": "Percent",
+              "value": 50
+            },
+            "y": {
+              "type": "Percent",
+              "value": 92
+            },
+            "name": "Country Specific Interventions"
+          }
+        },
+        "__parse": true
+      },
+      {
+        "fixed": true,
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -23.9256,
+            -22.37233
+          ],
+          "__parse": false
+        },
+        "id": "label_3",
+        "name": "Multi Country Interventions",
+        "populateText": true,
+        "settings": {
+          "type": "Template",
+          "settings": {
+            "text": "{name}",
+            "fill": {
+              "type": "Color",
+              "value": "#99ccff"
+            },
+            "fillOpacity": 1,
+            "fontSize": "1em",
+            "fontWeight": "bold",
+            "textAlign": "left",
+            "x": {
+              "type": "Percent",
+              "value": 50
+            },
+            "y": {
+              "type": "Percent",
+              "value": 95
+            }
+          }
+        },
+        "__parse": true
+      }
+    ],
     "editor.bubbleSeries": [],
     "editor.gridSeries": []
   }
